@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <title>Product Listing</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div id="root">
+            <nav class="navbar bg-body-tertiary" style="padding:  10px 20px;">
+                <div class="container-fluid">
+                    <a class="navbar-brand">The Product Hub</a>
+                    <a href="cart.html" style="color:black; font-size: 25px;"><i class="bi bi-cart-plus"></i></a>
+                </div>
+            </nav>
+            <div>
+                <div id="header">
+                    <div id="headline">
+                        <h1>Our Collections</h1>
+                    </div>
+                    <div id="subhead">
+                        <p>Discover our collection of available products</p>
+                    </div>
+                </div>
+                <div id="search-containner">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-secondary dropdown-toggle" id="filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-funnel"></i>
+                        Filter
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">All</a></li>
+                        <li><a class="dropdown-item" href="#">TV</a></li>
+                        <li><a class="dropdown-item" href="#">Laptop</a></li>
+                        <li><a class="dropdown-item" href="#">Mobile phones</a></li>
+                        <li><a class="dropdown-item" href="#">Chargers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container py-5 d-flex justify-content-center" style="margin-right: 0px;">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="product-list">
+                </div>
+            </div>
+            <div id="overlay">
+                <div id="add-product-container">
+                    <div id="add-product-form">
+                        <h4 style="margin: 25px auto;">Add New Product</h4>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" id="product-name" class="input" placeholder="Product Name" required><br>
+                                <input type="text" id="product-category" class="input" placeholder="Category" required><br>
+                                <input type="number" id="product-price" class="input" placeholder="Price" required><br>
+                                <input type="text" id="product-image" class="input" placeholder="Image URL" required><br>
+                                <textarea id="product-description" rows="3" class="input" placeholder="Description" required></textarea><br>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <button type="submit" class="btn btn-secondary me-2" id="cancel-button">Cancel</button><br>
+                                <button type="submit" class="btn btn-primary" id="add-button">Add Product</button><br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay-password">
+                <div id="password-form">
+                    <h4 style="margin: 25px auto;">Enter Password</h4>
+                    <p style="color: gray; margin-bottom: 20px;">Please enter your password to continue with this action..</p>
+                    <input type="password" id="password-input" class="input" placeholder="Password" required><br>
+                    <div class="d-flex justify-content-center mb-3" style="margin-top: 20px">
+                        <button type="button" class="btn btn-secondary me-2" id="cancel-password-button">Cancel</button><br>
+                        <button type="submit" class="btn btn-primary" id="submit-password-button">Submit</button><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
